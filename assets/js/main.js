@@ -24,8 +24,16 @@ function linkAction() {
 
 navLinks.forEach((link) => link.addEventListener("click", linkAction));
 
-
 /*=============== CHANGE BACKGROUND HEADER ===============*/
+const header = document.getElementById("header");
+
+function scrollHeader() {
+  this.scrollY >= 50
+    ? header.classList.add("bg-header")
+    : header.classList.remove("bg-header");
+}
+
+window.addEventListener("scroll", scrollHeader);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
